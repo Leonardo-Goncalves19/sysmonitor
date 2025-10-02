@@ -42,7 +42,7 @@ def monitor():
 
     g_pu = (gpu_list[0])[0]
     g_pu_mem = (gpu_list[0])[1]
-    os.system("clear")
+    os.system("cls" if os.name == "nt" else "clear")
     print(
         f"""
     {"="*20} SYSTEM {"="*20}
@@ -63,4 +63,5 @@ def monitor():
 
 
 while True:
+
     monitor()
