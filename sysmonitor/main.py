@@ -9,7 +9,7 @@ from termcolor import colored
 
 def unit(bytes, suffix="B"):
     factor = 1024
-    for unit in ["", "K", "M", "G", "T", "P"]:                             #Inicialmente, bytes = 1048576 e unit = "".  Como 1048576 >= 1024, divide-se bytes por 1024, obtendo 1024, e o unit passa a ser "K". Novamente, 1024 >= 1024, então divide-se bytes por 1024, obtendo 1, e o unit passa a ser "M". Agora, 1 < 1024, então a função retorna "1.00MB". Saída: "1.00MB" é o valor convertido e formatado.
+    for unit in ["", "K", "M", "G", "T", "P"]:
         if bytes < factor:
             return f"{bytes:.2f}{unit}{suffix}"
         bytes /= factor
@@ -65,3 +65,4 @@ def monitor():
 while True:
 
     monitor()
+
